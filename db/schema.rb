@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160605025113) do
+ActiveRecord::Schema.define(version: 20160605070245) do
 
   create_table "athletes", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(version: 20160605025113) do
     t.float    "weight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "image_path"
+    t.integer  "age"
+    t.string   "location"
   end
 
 end

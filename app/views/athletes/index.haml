@@ -1,0 +1,11 @@
+-@athletes.each do |athlete|
+  .athlete
+    = athlete.name
+    = athlete.age
+    = athlete.height
+    = athlete.weight
+    = athlete.location
+
+= link_to "Create Athlete", new_athlete_path
+= link_to "Edit Athlete", edit_athlete_path(@athlete)
+= link_to "Delete Athlete", athlete_path(@athlete), method: :delete
