@@ -11,17 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160605070245) do
+ActiveRecord::Schema.define(version: 20160605230736) do
 
   create_table "athletes", force: :cascade do |t|
     t.string   "name"
-    t.float    "height"
-    t.float    "weight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "image_path"
     t.integer  "age"
     t.string   "location"
+    t.string   "height"
+    t.integer  "weight"
   end
+
+  create_table "workouts", force: :cascade do |t|
+    t.string   "time"
+    t.integer  "distance"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "athlete_id"
+  end
+
+  add_index "workouts", ["athlete_id"], name: "index_workouts_on_athlete_id"
 
 end

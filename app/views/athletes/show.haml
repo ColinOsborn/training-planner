@@ -2,10 +2,15 @@
 
 %h1 Athlete
 %h2= @athlete.name
-%h3= @athlete.age 
+%h3= @athlete.age
 %h3= @athlete.height
 %h3= @athlete.weight
 %h3= @athlete.location
 = image_tag @athlete.image_path
-
-= link_to "Athletes", athletes_path
+%br
+  = link_to "Athletes Homepage", athletes_path
+  %br
+    = link_to "Edit this Athlete", edit_athlete_path(@athlete)
+    %br
+      = link_to "Delete this Athlete", athlete_path(@athlete), method: :delete
+      %br

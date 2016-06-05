@@ -38,7 +38,7 @@ class AthletesController < ApplicationController
   def destroy
     @athlete = Athlete.find(params[:id])
     @athlete.destroy
-    redirect_to athlete_path
+    redirect_to athletes_path
   end
 
   private
