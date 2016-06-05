@@ -1,0 +1,16 @@
+%h1 New Athlete
+
+= form_for @athlete do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.label :height
+  = f.text_field :height
+  = f.label :weight
+  = f.text_field :weight
+  = f.label :age
+  = f.text_field :age
+  = f.label :location
+  = f.text_field :location
+  = f.label :image_path
+  = f.text_field :image_path
+  = f.submit "Create New Athlete"

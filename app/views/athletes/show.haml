@@ -1,0 +1,11 @@
+= render "shared/flash_notices"
+
+%h1 Athlete
+%h2= @athlete.name
+%h3= @athlete.age 
+%h3= @athlete.height
+%h3= @athlete.weight
+%h3= @athlete.location
+= image_tag @athlete.image_path
+
+= link_to "Athletes", athletes_path
