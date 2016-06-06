@@ -1,9 +1,18 @@
--@athletes.each do |athlete|
-  %h2.athlete
-    = link_to athlete.name, athlete
-    = athlete.age
-    = athlete.height
-    = athlete.weight
-    = athlete.location
+%link{:crossorigin => "anonymous", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", :integrity => "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", :rel => "stylesheet"}/
 
-= link_to "Create Athlete", new_athlete_path
+.container
+  .jumbotron
+    %h2 Athletes
+    -@athletes.each do |athlete|
+      %h2.athlete
+      = link_to athlete.name, athlete
+      = athlete.age
+      = athlete.height
+      = athlete.weight
+      = athlete.location
+
+%nav.navbar.navbar-default.navbar-bottom
+  .container
+    = link_to "Create Athlete", new_athlete_path
+
+%script{:crossorigin => "anonymous", :integrity => "sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"}
