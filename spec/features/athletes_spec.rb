@@ -42,6 +42,6 @@ describe 'user management' do
     expect(page).to have_content "Colin Osborn"
 
     click_on "Edit Athlete"
-
+    # change these test to cover full crud
   end
 end

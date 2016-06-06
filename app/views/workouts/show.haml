@@ -1,0 +1,7 @@
+= render "shared/flash_notices"
+
+%h1= @athlete.name
+-# %h2= @athlete.name
+%h3= @workout.time
+%h3= @workout.distance
+= image_tag @athlete.image_path
