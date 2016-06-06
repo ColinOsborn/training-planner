@@ -1,7 +1,15 @@
-= render "shared/flash_notices"
+%link{:crossorigin => "anonymous", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", :integrity => "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", :rel => "stylesheet"}/
 
-%h1= @athlete.name
--# %h2= @athlete.name
-%h3= @workout.time
-%h3= @workout.distance
-= image_tag @athlete.image_path
+.container
+  .jumbotron
+    = render "shared/flash_notices"
+
+    %h1= @athlete.name
+    %h3= "#{@workout.time}:Duration "
+    %h3= "#{@workout.distance}:Miles "
+    = image_tag @athlete.image_path
+
+
+%nav.navbar.navbar-default.navbar-bottom
+  .container
+    = link_to "Athletes Homepage", athletes_path

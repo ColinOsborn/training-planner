@@ -5,5 +5,8 @@ class Athlete < ActiveRecord::Base
   validates :height, presence: true
   validates :weight, presence: true
 
+  # before_action :require_login
+
   has_many :workouts
+  has_many :coaches
 end

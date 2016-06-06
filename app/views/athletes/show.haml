@@ -1,20 +1,29 @@
-= render "shared/flash_notices"
+%link{:crossorigin => "anonymous", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", :integrity => "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", :rel => "stylesheet"}/
 
-%h1 Athlete
-%h2= @athlete.name
-%h3= @athlete.age
-%h3= @athlete.height
-%h3= @athlete.weight
-%h3= @athlete.location
-= image_tag @athlete.image_path
+.container
+  .jumbotron
 
-%br/
-= link_to "New Workout", new_athlete_workout_path(@athlete)
-%br/
-= link_to "Athletes Workouts", athlete_workouts_path(@athlete)
-%br/
-= link_to "Athletes Homepage", athletes_path
-%br/
-= link_to "Edit this Athlete", edit_athlete_path(@athlete)
-%br/
-= link_to "Delete this Athlete", athlete_path(@athlete), method: :delete
+    = render "shared/flash_notices"
+
+    %h1= @athlete.name
+    %h3= "#{@athlete.age} years old"
+    %h3= "Height: #{@athlete.height}"
+    %h3= "Weight: #{@athlete.weight}lbs"
+    %h3= "Hometown: #{@athlete.location}"
+    = image_tag @athlete.image_path
+
+
+%nav.navbar.navbar-default.navbar-bottom
+  .container
+    %br/
+    = link_to "New Workout", new_athlete_workout_path(@athlete)
+    %br/
+    = link_to "Athletes Workouts", athlete_workouts_path(@athlete)
+    %br/
+    = link_to "Athletes Homepage", athletes_path
+    %br/
+    = link_to "Edit this Athlete", edit_athlete_path(@athlete)
+    %br/
+    = link_to "Delete this Athlete", athlete_path(@athlete), method: :delete
+
+%script{:crossorigin => "anonymous", :integrity => "sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"}
