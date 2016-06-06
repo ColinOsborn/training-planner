@@ -1,5 +1,8 @@
 require 'rails_helper'
 
+#  You've changed requirements etc and numerous other items
+#  So these tests will not pass
+
 describe 'user management' do
   it 'can create a user' do
     visit '/'
