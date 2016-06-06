@@ -23,6 +23,11 @@ class WorkoutsController < ApplicationController
     @workout = Workout.find(params[:id])
   end
 
+  def index
+    @athlete = Athlete.find(params[:athlete_id])
+    @workout = @athlete.workouts.find(workout_params)
+  end
+
   private
 
   def workout_params

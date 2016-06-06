@@ -1,9 +1,17 @@
 class User < ActiveRecord::Base
+  include BCrypt
   has_secure_password
 
   validates :username, presence: true, uniqueness: true
 
   enum role: ["default", "admin"]
-  # what corresponding integer value of the role
+  #
+  # def password
+  #   @password ||= Password.new(password_digest)
+  # end
+
+  def password=(new_password)
+    Password.create(new_password)
+  end
 
 end
