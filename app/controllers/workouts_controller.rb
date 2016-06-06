@@ -25,13 +25,13 @@ class WorkoutsController < ApplicationController
 
   def index
     @athlete = Athlete.find(params[:athlete_id])
-    @workout = @athlete.workouts.find(workout_params)
+    @workouts = @athlete.workouts.all
   end
 
   private
 
   def workout_params
-    params.require(:workout).permit(:time, :distance)
+    params.require(:workout).permit(:time, :distance,)
   end
 
 end
