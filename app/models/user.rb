@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   validates :username, presence: true, uniqueness: true
 
-  enum role: ["default", "admin"]
+  enum role: ["coach", "admin", "athlete"]
   #
   # def password
   #   @password ||= Password.new(password_digest)

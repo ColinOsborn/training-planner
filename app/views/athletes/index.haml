@@ -2,14 +2,14 @@
 
 .container
   .jumbotron
-    %h2 Athletes
+    %h2 Your Athletes
     -@athletes.each do |athlete|
       %h2.athlete
       = link_to athlete.name, athlete
-      = athlete.age
-      = athlete.height
-      = athlete.weight
-      = athlete.location
+      -# = athlete.age
+      -# = athlete.height
+      -# = athlete.weight
+      -# = athlete.location
 
 %nav.navbar.navbar-default.navbar-bottom
   .container
