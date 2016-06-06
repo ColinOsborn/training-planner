@@ -4,7 +4,6 @@ class Athlete < ActiveRecord::Base
   validates :location, presence: true
   validates :height, presence: true
   validates :weight, presence: true
-  validates :image_path, presence: true
 
   has_many :workouts
 end
